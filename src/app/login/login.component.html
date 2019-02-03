@@ -1,0 +1,19 @@
+<section id="login-choice">
+  <ul>
+    <li>
+      <h2>Choose your login method:</h2>
+    </li>
+    <li>
+      <button routerLink="/email" id="email">Login with e-mail</button>
+    </li>
+    <li>
+      <button (click)="loginWithGoogle()" id="google">Login with Google</button>
+    </li>
+    <li>
+      <button (click)="loginAnonymously()" id="anonymous">Anonymous</button>
+    </li>
+    <li>
+      <a routerLink="/register" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+    </li>
+  </ul>
+</section>
