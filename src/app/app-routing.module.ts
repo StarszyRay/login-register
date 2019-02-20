@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { EmailComponent } from './email/email.component';
-import { MemberComponent } from './member/member.component';
+import { LoginComponent } from './modules/login/login.component';
+import { RegisterComponent } from './modules/register/register.component';
+import { EmailComponent } from './modules/email/email.component';
+import { MemberComponent } from './modules/member/member.component';
 import { ModuleWithProviders } from '@angular/core';
+import {PersonListComponent} from './modules/person-list/person-list.component';
 
 const router: Routes = [
   { path: '', component: LoginComponent },

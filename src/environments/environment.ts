@@ -1,9 +1,9 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-import { cloack } from './myKeys';
+import { cloak } from './myKeys';
 
-const myApiKey = cloack.MY_API_KEY;
+const myApiKey = cloak.MY_API_KEY;
 export const environment = {
   production: false,
   firebase: {

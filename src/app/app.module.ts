@@ -9,12 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import { RegisterComponent } from './register/register.component';
-import { EmailComponent } from './email/email.component';
-import { LoginComponent } from './login/login.component';
-import { MemberComponent } from './member/member.component';
+import { RegisterComponent } from './modules/register/register.component';
+import { EmailComponent } from './modules/email/email.component';
+import { LoginComponent } from './modules/login/login.component';
+import { MemberComponent } from './modules/member/member.component';
 import { routes } from './app-routing.module';
 import {ServiceModule} from './services/service.module';
+import {TestService} from './services/test.service';
+import {HttpClientModule} from '@angular/common/http';
+import { PersonListComponent } from './modules/person-list/person-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import {ServiceModule} from './services/service.module';
     RegisterComponent,
     EmailComponent,
     LoginComponent,
-    MemberComponent
+    MemberComponent,
+    PersonListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,10 @@ import {ServiceModule} from './services/service.module';
     AngularFireModule.initializeApp(environment.firebase, 'login-register'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    routes
+    routes,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
